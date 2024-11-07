@@ -1,0 +1,344 @@
+body {
+  font-family: "Open Sans", serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+img {
+  display: block;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgb(159, 231, 239);
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav ul li {
+  margin: 0 20px;
+}
+
+.nav ul li a {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 100px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 230px 10%;
+  position: relative;
+  background-image: url("../img/fon-maldive.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards 0.5s;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hero-buttons .btn {
+  padding: 15px 25px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #070708;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: rgb(159, 231, 239);
+  color: #090909;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #090909;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(159, 231, 239);
+  color: #090909;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.hero-image-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(159, 231, 239, 0.5);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.hero-image-circle img {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: appear 16s infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  10%,
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.hero-image-circle img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.hero-image-circle img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.hero-image-circle img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.hero-image-circle img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.hero-image-circle img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+.hero-image-circle img:nth-child(6) {
+  animation-delay: 10s;
+}
+
+.hero-image-circle img:nth-child(7) {
+  animation-delay: 12s;
+}
+
+.hero-image-circle img:nth-child(8) {
+  animation-delay: 14s;
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 5%;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 100px 5%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hero-image-circle {
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+  }
+
+  .hero-image-circle img {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 15px 8%;
+  }
+
+  .nav ul {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 150px 8%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 24px;
+  }
+
+  .hero-buttons .btn {
+    padding: 12px 20px;
+  }
+
+  .hero-image-circle {
+    width: 350px;
+    height: 350px;
+    margin-top: 80px;
+  }
+
+  .hero-image-circle img {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 58px;
+  }
+
+  .hero-description {
+    font-size: 28px;
+  }
+
+  .hero-buttons .btn {
+    padding: 15px 30px;
+  }
+
+  .hero-image-circle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hero-image-circle img {
+    width: 370px;
+    height: 370px;
+  }
+}

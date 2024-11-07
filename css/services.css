@@ -1,0 +1,11 @@
+.hero-services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 230px 10%;
+  position: relative;
+  background-image: url("../img/fon.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
